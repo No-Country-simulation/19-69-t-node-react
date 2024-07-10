@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <nav className="navbar-content">
         <div className="divisor">
-          <h1 className="nav-title">Edén de Sabores</h1>
+          <h2 className="nav-title">Edén de Sabores</h2>
           <button className="dropdown-toggle" onClick={handleClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

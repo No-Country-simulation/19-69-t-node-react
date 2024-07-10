@@ -28,6 +28,7 @@
   max-width: 100%;
   margin-top: 10px;
   color: var(--color-text-2);
+  height: 76px;
 }
 
 .nav-title {
@@ -43,6 +44,7 @@
   align-items: center;
   gap: 1rem;
   text-align: center;
+  height: 0vh;
 }
 
 .nav-link {
@@ -144,6 +146,9 @@
   .navbar-content {
     padding: 0.6rem 0.5rem;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-title {
@@ -156,6 +161,19 @@
 
   .nav-items.isActive {
     display: flex;
+    position: relative;
+    top: 22px;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--background-color-1);
+    width: 100vw;
+    padding: 10px 0;
+  }
+  .nav-link {
+    font-size: var(--font-size-small);
+  }
+  .nav-link:hover {
+    background-color: transparent;
   }
 
   .dropdown-toggle {
@@ -197,6 +215,8 @@
   .navbar-content {
     padding: 1rem 0.8rem;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .divisor {
@@ -208,10 +228,24 @@
 
   .nav-items {
     display: none;
+    transition: 0.5s ease;
   }
 
   .nav-items.isActive {
     display: flex;
+    position: relative;
+    top: 16px;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--background-color-1);
+    width: 100vw;
+    padding: 10px 0;
+  }
+  .nav-link {
+    font-size: var(--font-size-small);
+  }
+  .nav-link:hover {
+    background-color: transparent;
   }
 
   .title-desc {
