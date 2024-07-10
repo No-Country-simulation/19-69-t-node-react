@@ -1,0 +1,115 @@
+.background-image {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  filter: brightness(0.5);
+  max-width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text-2);
+  padding: 1.3rem 2rem;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--background-color-1);
+  max-width: 100%;
+  width: 100%;
+  margin-top: 1rem;
+}
+.nav-title {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.nav-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--color-text-2);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+.dropdown-toggle {
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+@media (width <= 320px) {
+  .navbar-content {
+    padding: 0.8rem 0.5rem;
+    margin-top: 0;
+  }
+  .dropdown-toggle {
+    display: block;
+  }
+  .nav-title {
+    font-size: 1.3rem;
+  }
+  .nav-items {
+    display: none;
+  }
+}
+@media (360px <= width <= 767px) {
+  .navbar-content {
+    padding: 0.6rem 0.5rem;
+    margin-top: 0;
+  }
+
+  .nav-title {
+    font-size: 1.75rem;
+  }
+  .nav-items {
+    display: none;
+  }
+  .nav-items.isActive {
+    color: aqua;
+  }
+  .dropdown-toggle {
+    display: block;
+  }
+}
+@media (767px <= width <= 1270px) {
+  .dropdown-toggle {
+    display: block;
+  }
+  .navbar-content {
+    padding: 1rem 0.8rem;
+    margin-top: 0;
+  }
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-item {
+    list-style-type: none;
+  }
+  .divisor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-items.isActive {
+    display: flex;
+    flex-direction: row;
+    background-color: #454545;
+    border-bottom: 2px solid aliceblue;
+    height: 40vh;
+    opacity: 1;
+  }
+}
