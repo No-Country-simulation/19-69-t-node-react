@@ -1,5 +1,3 @@
-import "./Header.css";
-
 export default function ImageBackground({ children }) {
   return (
     <section>

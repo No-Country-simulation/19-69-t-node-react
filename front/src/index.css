@@ -2,6 +2,15 @@
   --background-color-1: #c10017ad; /* o tambien #c10016*/
   --color-text-1: #000000;
   --color-text-2: #ffffff;
+
+  --font-size-small: 1rem;
+  --font-size-medium: 1.75rem;
+  --font-size-large: 3.5rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 800;
+  --color-primary: #ff001e;
+  --color-highlight: #c10016;
 }
 
 html {

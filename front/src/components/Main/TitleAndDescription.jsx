@@ -6,7 +6,7 @@ export default function TitleAndDescription() {
       </h1>
       <p className="welcome-description">
         Descubre una experiencia culinaria única donde los sabores de México,
-        España, Argentina y Colombia fusionan.
+        Argentina, España y Colombia se fusionan.
       </p>
     </>
   );
