@@ -28,7 +28,7 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <ul className={`${showDropdown ? "isActive" : "nav-items"}`}>
+        <ul className={`nav-items ${showDropdown ? "isActive" : ""}`}>
           <li className="nav-item">
             <a className="nav-link" href="#">
               Inicio

@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import ImageBackground from "./ImageBackground";
+import TitleAndDescription from "./TitleAndDescription";
 import "../Header/Header.css";
 
 export default function Header() {
@@ -7,8 +8,10 @@ export default function Header() {
     <>
       <header className="header">
         <Navbar />
-        <ImageBackground />
       </header>
+      <ImageBackground>
+        <TitleAndDescription />
+      </ImageBackground>
     </>
   );
 }
