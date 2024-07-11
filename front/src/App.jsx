@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-// import { AuthView } from "./components/AuthView/AuthView";
+import { AuthView } from "./components/AuthView/AuthView";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 // import Footer from "./components/Footer/Footer";
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Main />} />
-        {/* <Route path="/login" element={<AuthView />} /> */}
+        <Route path="/login" element={<AuthView />} />
       </Routes>
     </>
   );
