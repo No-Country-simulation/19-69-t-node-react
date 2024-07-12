@@ -1,6 +1,6 @@
 export default function ImageBackground({ children }) {
   return (
-    <section>
+    <section className="section-welcome">
       <img
         src="/imgs/bg-image.jpg"
         alt="Imagen del background de Eden de Sabores"
