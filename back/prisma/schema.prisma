@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL_DEV")
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  food      Food[]   @relation("Food_Tags")
+}
+
+model Country {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Food      Food[]
+}
+
+model Ingredient {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  food      Food[]   @relation("Food_Ingredients")
+}
+
+model Food {
+  id          String       @id @default(cuid())
+  name        String
+  price       Float
+  description String
+  image       String
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  countryId   String
+  country     Country      @relation(fields: [countryId], references: [id])
+  ingredients Ingredient[] @relation("Food_Ingredients")
+  tags        Tag[]        @relation("Food_Tags")
+}

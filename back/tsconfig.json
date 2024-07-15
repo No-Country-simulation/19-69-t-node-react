@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    
     // Set the ECMAScript version to ES2020
     "target": "ES2020",
 
@@ -24,6 +25,7 @@
     // Enable strict type checking rules
     "strict": true
   },
+
 
   // Specify the files that should be included and excluded in the compilation process
   "include": ["src/**/*.ts"],
