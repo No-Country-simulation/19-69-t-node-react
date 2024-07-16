@@ -14,14 +14,13 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Header />
         <Main />
-        <div className="flex-grow"></div> {/* Este div actúa como un espacio flexible */}
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+          <Route path="/login" element={<AuthView />} />
+        </Routes>
+
         <Footer />
       </div>
-
-      <Routes>
-        <Route exact path="/" element={<Main />} />
-        <Route path="/login" element={<AuthView />} />
-      </Routes>
 
     </>
 

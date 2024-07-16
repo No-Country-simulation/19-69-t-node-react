@@ -1,6 +1,6 @@
+import "../Main/Main.css";
 import ImageBackground from "./ImageBackground";
 import TitleAndDescription from "./TitleAndDescription";
-import "../Main/Main.css";
 
 export default function Main() {
   return (
