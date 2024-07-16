@@ -1,29 +1,20 @@
-
 import { Typography } from "@material-tailwind/react";
 
 export default function Footer() {
-
-
-
   return (
-    <footer className="relative z-50  w-screen text-xs">
+    <footer className="relative z-50 w-full text-xs">
       <div className="mx-auto lg:text-xs tw-full max-w-full px-8 bg-amber-950 rounded-sm opacity-90 sm:px-8 text-white">
         <div className="flex lg:text-xs flex-col sm:flex-row lg:flex-row justify-between items-center sm:gap-4">
           <div className="text-left lg:text-xs text-xs mb-2">
             <Typography className="lg:text-xs mb-2 mt-2 lg:ml-0 md:text-xs sm:text-xs xl:text-xs 2xl:text-xs text-xs text-center md:whitespace-nowrap">
               Horarios
-
               <br />Lunes - Viernes:  10:00 am - 20:00 pm
               <br />Sabado - Domingo:  11:40 am - 19:00 pm
-
-
-
             </Typography>
           </div>
-          <div className="flex flex-col lg:flex-col justify-center items-center flex text-center lg:gap-2">
+          <div className="flex-col lg:flex-col justify-center items-center flex text-center lg:gap-2">
             <h1 className="pb-2 text-xs xl:text-xs 2xl:text-xs">Redes Sociales</h1>
             <div className="flex justify-center items-center gap-3 sm:gap-4">
-
               <Typography as="a" href="/" target="_blank" className=" opacity-80 transition-opacity hover:opacity-100 transform hover:scale-125">
                 <svg className="h-5 w-5 md:h-5 md:w-5 sm:h-7 sm:w-7" width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -46,23 +37,17 @@ export default function Footer() {
                 <svg className="h-5 w-5 md:h-5 md:w-5 sm:h-7 sm:w-7 bi bi-twitter-x" xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
                 </svg>
-
               </Typography>
-
-
               <Typography as="a" href="/" target="_blank" className="opacity-80 transition-opacity hover:opacity-100 transform hover:scale-125">
                 <svg className="h-5 w-5 md:h-5 md:w-5 sm:h-7 sm:w-7 bi bi-tiktok" xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
                 </svg>
               </Typography>
             </div>
-
           </div>
-          <div className="flex flex-col justify-center items-center flex text-center sm:text-sm mt-2 sm:mt-0">
+          <div className="flex-col justify-center items-center flex text-center sm:text-sm mt-2 sm:mt-0">
             <h1 className="mb-2 mt-2 xl:text-xs 2xl:text-xs" >Delivery</h1>
             <div className="flex justify-center items-center pb-2 gap-4">
-
-
               <Typography as="a" href="/" target="_blank" className="opacity-80 transition-opacity hover:opacity-100 transform hover:scale-125">
                 <img src="/imgs/ubereats.png" alt="" className="w-6 h-6 lg:w-10 lg:h-10" /> {/* Ajusta aquí */}
               </Typography>
@@ -78,9 +63,7 @@ export default function Footer() {
               <Typography as="a" href="/" target="_blank" className="opacity-80 transition-opacity hover:opacity-100 transform hover:scale-125">
                 <img src="/imgs/glovo.png" alt="" className="rounded-xl w-6 h-6 lg:w-10 lg:h-10" /> {/* Ajusta aquí */}
               </Typography>
-
             </div>
-
           </div>
         </div>
       </div>

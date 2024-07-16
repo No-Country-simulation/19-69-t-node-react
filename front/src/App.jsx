@@ -7,23 +7,16 @@ import Main from "./components/Main/Main";
 // import Footer from "./components/Footer/Footer";
 import "./App.css";
 
-
 function App() {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <Main />
+      <Header />
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route path="/login" element={<AuthView />} />
         </Routes>
-
-        <Footer />
-      </div>
-
+      <Footer />
     </>
-
   );
 }
 
