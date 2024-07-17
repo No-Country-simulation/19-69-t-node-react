@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { LoginForm } from "./LoginForm";
 import { SignUpForm } from "./SignUpForm";
+import { IoHomeOutline } from "react-icons/io5";
 
 export function AuthView() {
   const [isLogin, setIsLogin] = useState(true);
@@ -27,7 +28,10 @@ export function AuthView() {
           </p>
         </div>
       </section>
-      <section className="flex items-center mt-16 justify-center w-full lg:w-1/2 px-4 md:p-8">
+      <section className="relative flex items-center mt-16 justify-center w-full lg:w-1/2 px-4 md:p-8">
+        <a className="absolute top-0 right-0 mr-16 text-3xl hover:text-red-500/90 transition-all" href="/">
+          <IoHomeOutline />
+        </a>
         <div className={`w-full max-w-md transition-all duration-300 ${isLogin ? "mt-0" : "mb-10"}`}>
           <div className="flex flex-col items-center mb-10 gap-4">
             <img
