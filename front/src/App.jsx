@@ -10,12 +10,12 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Header />
-        <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route path="/login" element={<AuthView />} />
-        </Routes>
-      <Footer />
+      {window.location.pathname !== "/login" ? <Header /> : null}
+      <Routes>
+        <Route exact path="/" element={<Main />} />
+        <Route path="/login" element={<AuthView />} />
+      </Routes>
+      {window.location.pathname !== "/login" ? <Footer /> : null}
     </>
   );
 }
