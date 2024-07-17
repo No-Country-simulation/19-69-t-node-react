@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 321px) and (max-width: 767px) {
   .navbar-content {
     padding: 0.6rem 0.5rem;
     margin-top: 0;
@@ -107,7 +107,7 @@
   .nav-items.isActive {
     display: flex;
     position: relative;
-    top: 22px;
+    top: 24px;
     height: 100vh;
     flex-direction: column;
     background-color: var(--background-color-1);
@@ -143,6 +143,7 @@
     margin-top: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .divisor {
     display: flex;
