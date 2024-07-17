@@ -16,7 +16,7 @@ export default {
       },
       colors: {
         custom: {
-          100: '#190701',  // Puedes ajustar el nombre y el nivel según lo necesites
+          100: '#190701',
         },
       },
     },
