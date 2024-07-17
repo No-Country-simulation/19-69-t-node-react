@@ -2,6 +2,7 @@ import express from "express";
 
 import { foodRoutes } from "./api/routes/index.js";
 import { tagsRoutes } from "./api/routes/index.js";
+import { countriesRoutes } from "./api/routes/index.js";
 
 const app = express();
 app.use(express.json());
@@ -9,6 +10,7 @@ const port = 3000;
 
 app.use("/api/food", foodRoutes);
 app.use("/api/tags", tagsRoutes);
+app.use("/api/countries", countriesRoutes);
 
 
 app.listen(port, () => {
