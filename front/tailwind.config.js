@@ -15,9 +15,8 @@ export default {
         'xs': '400px',
       },
       colors: {
-        custom: {
-          100: '#190701',
-        },
+        "main-color": '#190701',
+        "secondary-color": '#451a03',
       },
     },
   },
