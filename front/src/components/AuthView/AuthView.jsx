@@ -18,7 +18,7 @@ export function AuthView() {
   }, [isLogin]);
 
   return (
-    <article className="flex min-h-screen">
+    <article className="flex min-h-screen bg-gray-100/20">
       <section className="w-1/2 hidden lg:block bg-cover xl:shadow-[5px_0_40px_20px_rgba(0,0,0,0.2)] bg-center bg-[url('https://images.unsplash.com/photo-1502301103665-0b95cc738daf?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
         <div className="flex flex-col justify-center h-full p-8 text-white bg-black bg-opacity-55">
           <h2 className="text-sm">Platos increíbles de distintos países.</h2>
@@ -28,8 +28,8 @@ export function AuthView() {
           </p>
         </div>
       </section>
-      <section className="relative flex items-center mt-16 justify-center w-full lg:w-1/2 px-4 md:p-8">
-        <a className="absolute top-0 right-0 mr-16 text-3xl hover:text-red-500/90 transition-all" href="/">
+      <section className="relative flex items-center justify-center w-full lg:w-1/2 px-4 md:p-8">
+        <a className="absolute top-0 right-0 mr-5 xs:mr-10 mt-5 xs:mt-10 text-3xl hover:text-main-orange/70 transition-all" href="/">
           <IoHomeOutline />
         </a>
         <div className={`w-full max-w-md transition-all duration-300 ${isLogin ? "mt-0" : "mb-10"}`}>
@@ -42,15 +42,15 @@ export function AuthView() {
             <h2 className="sm:mt-4 text-lg sm:text-2xl font-bold">Edén de sabores</h2>
             <div className="sm:hidden text-center">
               {isLogin ? 
-                <h3>¿No tienes una cuenta?<button onClick={() => setIsLogin(false)} className="px-2 underline decoration-red-400 underline-offset-2">Registrate</button></h3> 
+                <h3>¿No tienes una cuenta?<button onClick={() => setIsLogin(false)} className="px-2 underline decoration-main-orange/70 underline-offset-2">Registrate</button></h3> 
                 : 
-                <h3>¿Ya tienes una cuenta?<button onClick={() => setIsLogin(true)} className="px-2 underline decoration-red-400 underline-offset-2">Inicia sesión</button></h3>
+                <h3>¿Ya tienes una cuenta?<button onClick={() => setIsLogin(true)} className="px-2 underline decoration-main-orange/70 underline-offset-2">Inicia sesión</button></h3>
               }
               <span></span>
             </div>
             <div className="hidden sm:flex flex-wrap justify-center sm:justify-start pr-3 mt-4 gap-5 relative bg-gray-200/70 rounded-md px-2 py-1">
               <div
-                className={`absolute hidden sm:block bg-red-500/60 z-10 w-[45%] h-10 pointer-events-auto rounded-md transition-all duration-300 ${
+                className={`absolute hidden sm:block bg-main-orange/70 z-10 w-[45%] h-10 pointer-events-auto rounded-md transition-all duration-300 ${
                   isLogin 
                   ? "transform translate-x-0" 
                   : "transform translate-x-[112%]"
