@@ -1,5 +1,5 @@
 :root {
-  --background-color-1: #c10017ad; /* o tambien #c10016*/
+  --background-color-1: #451a03c5;
   --color-text-1: #000000;
   --color-text-2: #ffffff;
 
@@ -9,7 +9,7 @@
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 800;
-  --color-primary: #ff001e;
+  --color-primary: #e0570dfd;
   --color-highlight: #c10016;
 }
 

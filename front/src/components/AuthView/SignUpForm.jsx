@@ -11,7 +11,7 @@ export const SignUpForm = () => {
       <InputForm type="email"><LuAtSign /></InputForm>
       <InputForm type="password"><RiLockPasswordLine /></InputForm>
       <div className="flex flex-col w-full gap-5 !mt-5">
-        <button className="w-1/2 mt-8 py-2 rounded-md self-center font-semibold border-b-2 border-red-500/60 bg-gray-200/60 hover:bg-red-300/30 transition-all">
+        <button className="w-1/2 mt-8 py-2 rounded-md self-center font-semibold border-b-2 border-main-orange/70 bg-gray-200/60 hover:bg-main-orange/30 transition-all">
           REGISTRARSE
         </button>
       </div>

@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar-content">
+      <nav className="navbar-content bg-secondary-color/80">
         <div className="divisor">
           <h2 className="nav-title text-white">Edén de Sabores</h2>
           <button className="dropdown-toggle" onClick={handleClick}>
@@ -28,7 +28,7 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <ul className={`nav-items ${showDropdown ? "isActive" : ""}`}>
+        <ul className={`nav-items ${showDropdown ? "isActive bg-secondary-color/80" : ""}`}>
           <li className="nav-item">
             <a className="nav-link" href="#">
               Inicio

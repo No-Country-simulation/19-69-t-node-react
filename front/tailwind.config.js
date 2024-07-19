@@ -6,8 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-
-
       fontFamily: {
         'montserrat': ['Montserrat'],
         'lato': ['Lato'],
@@ -16,7 +14,12 @@ export default {
       screens: {
         'xs': '400px',
       },
+      colors: {
+        "main-color": '#190701',
+        "secondary-color": '#451a03',
+        "main-orange": '#e0570dfd',
+      },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
 };

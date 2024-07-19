@@ -1,12 +1,11 @@
 .navbar-content {
   display: flex;
-  
+
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 2rem;
   position: fixed;
   z-index: 1;
-  background-color: var(--background-color-1);
   width: 100%;
   max-width: 100%;
   margin-top: 10px;
@@ -79,8 +78,6 @@
     position: relative;
     top: 22px;
     height: 100vh;
-    flex-direction: column;
-    background-color: var(--background-color-1);
     width: 100vw;
     padding: 10px 0;
   }
@@ -92,14 +89,12 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 321px) and (max-width: 767px) {
   .navbar-content {
     padding: 0.6rem 0.5rem;
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   .nav-title {
     font-size: var(--font-size-medium);
@@ -110,13 +105,13 @@
   .nav-items.isActive {
     display: flex;
     position: relative;
-    top: 22px;
+    top: 24px;
     height: 100vh;
     flex-direction: column;
-    background-color: var(--background-color-1);
     width: 100vw;
     padding: 10px 0;
   }
+
   .nav-link {
     font-size: var(--font-size-small);
   }
@@ -145,6 +140,7 @@
     margin-top: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .divisor {
     display: flex;
@@ -162,7 +158,6 @@
     top: 16px;
     height: 100vh;
     flex-direction: column;
-    background-color: var(--background-color-1);
     width: 100vw;
     padding: 10px 0;
   }

@@ -3,7 +3,7 @@ import { Typography } from "@material-tailwind/react";
 export default function Footer() {
   return (
     <footer className="relative z-50 w-full text-xs">
-      <div className="mx-auto lg:text-xs tw-full max-w-full px-8 bg-amber-950 rounded-sm opacity-90 sm:px-8 text-white">
+      <div className="mx-auto lg:text-xs tw-full max-w-full px-8 bg-secondary-color rounded-sm opacity-90 sm:px-8 text-white">
         <div className="flex lg:text-xs flex-col sm:flex-row lg:flex-row justify-between items-center sm:gap-4">
           <div className="text-left lg:text-xs text-xs mb-2">
             <Typography className="lg:text-xs mb-2 mt-2 lg:ml-0 md:text-xs sm:text-xs xl:text-xs 2xl:text-xs text-xs text-center md:whitespace-nowrap">
