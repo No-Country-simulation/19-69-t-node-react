@@ -12,6 +12,7 @@ const port = 3000;
 
 app.use("/api/food", foodRoutes);
 app.use("/api/tags", tagsRoutes);
+app.use("/api/user", userRoutes);
 
 
 app.listen(port, () => {
