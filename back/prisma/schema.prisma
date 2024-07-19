@@ -44,3 +44,12 @@ model Food {
   ingredients Ingredient[] @relation("Food_Ingredients")
   tags        Tag[]        @relation("Food_Tags")
 }
+
+model User {
+  id        String @id @default(autoincrement())
+  name      String
+  lastname  String
+  email     String 
+  phone     String
+  password  String
+}
