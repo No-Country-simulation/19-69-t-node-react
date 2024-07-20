@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "/src/components/Header/Logo";
 
 export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -11,7 +13,7 @@ export default function Navbar() {
     <>
       <nav className="navbar-content bg-secondary-color/80">
         <div className="divisor">
-          <h2 className="nav-title text-white">Edén de Sabores</h2>
+          <Logo />
           <button className="dropdown-toggle" onClick={handleClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -28,11 +30,15 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <ul className={`nav-items ${showDropdown ? "isActive bg-secondary-color/80" : ""}`}>
+        <ul
+          className={`nav-items ${
+            showDropdown ? "isActive bg-secondary-color/80" : ""
+          }`}
+        >
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to={"/"}>
               Inicio
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
@@ -45,9 +51,9 @@ export default function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to={"/contacto"}>
               Contacto
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
