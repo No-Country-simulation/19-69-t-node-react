@@ -16,7 +16,7 @@ export default {
       },
       colors: {
         "main-color": '#190701',
-        "secondary-color": '#451a03',
+        "secondary-color": '#9E0303',
         "main-orange": '#e0570dfd',
       },
     },
