@@ -11,13 +11,13 @@ function App() {
   return (
     <>
       {window.location.pathname !== "/login" &&
-      window.location.pathname !== "/contact" ? (
+      window.location.pathname !== "/contacto" ? (
         <Header />
       ) : null}
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route path="/login" element={<AuthView />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contacto" element={<Contact />} />
       </Routes>
       {window.location.pathname !== "/login" ? <Footer /> : null}
     </>

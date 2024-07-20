@@ -3,13 +3,15 @@ import LocationMap from "./LocationMap";
 
 export default function Contact() {
   return (
-    <section className="bg-main-color text-white py-5 pt-10 px-3 md:px-5 lg:px-10">
-      <div>
-        <h1 className="uppercase">Contact</h1>
-        <p className="text-4xl font-medium">Contactanos</p>
+    <section className="bg-main-color text-white py-5 pt-10 px-3 md:px-5 lg:px-10 h-screen">
+      <div className="relative top-16">
+        <div>
+          <h1 className="uppercase">Contact</h1>
+          <p className="text-4xl font-medium">Contactanos</p>
+        </div>
+        <FormContact />
+        <LocationMap />
       </div>
-      <FormContact />
-      <LocationMap />
     </section>
   );
 }
