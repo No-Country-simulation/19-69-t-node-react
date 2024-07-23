@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import "./App.css";
 import Contact from "./components/Main/Contact/Contact";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/" element={<Main />} />
         <Route path="/login" element={<AuthView />} />
         <Route path="/contacto" element={<Contact />} />
+        <Route path="/nosotros" element={<AboutUs />} />
       </Routes>
       {window.location.pathname !== "/login" ? <Footer /> : null}
     </>
