@@ -25,7 +25,7 @@ const Menu = () => {
       <h1 className="mt-5 mb-24 text-3xl md:text-[2.6rem] underline decoration-[#4b2b21] underline-offset-8 decoration-2">
         Nuestros platos
       </h1>
-      <div className="h-full place-items-center grid gap-14 grid-cols-3 text-xl">
+      <div className="h-full place-items-center grid gap-14 grid-cols-2 sm:grid-cols-3 text-xl px-5 sm:px-0">
         {renderCountries()}
       </div>
     </section>
