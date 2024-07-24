@@ -8,7 +8,6 @@ router.post("/", async (req, res) => {
     const hash = bcrypt.hash(password, 10)
     const newUser = await prisma.user.create({
         data: req.body,
-        pasword: hash
     })
     res.json(newUser);
 });
@@ -37,10 +36,10 @@ router.put("/:id", async (req, res) => {
     res.json(userToUpdate);
 });
 
-router.delete("/", async (req, res) =>{
-    const userToDelete = prisma.user.findByIdAndDelete({
+router.delete("/:id", async (req, res) =>{
+    const userToDelete = prisma.user.delete({
         where: {
-            id: req.body.id
+            id: req.params.id
         }
     })
     res.json("Usuario eliminado");
