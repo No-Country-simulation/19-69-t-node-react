@@ -54,8 +54,5 @@ model User {
   password  String
 }
 
-model Reservation {
-  
-}
 
 
