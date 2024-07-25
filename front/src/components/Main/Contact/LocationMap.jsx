@@ -6,7 +6,7 @@ export default function LocationMap() {
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="w-full max-w-full mx-auto py-4 md:w-3/4"
+        className="w-full max-w-full mx-auto py-4 md:w-3/4 md:h-3/4"
       ></iframe>
     </>
   );
