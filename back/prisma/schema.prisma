@@ -52,6 +52,17 @@ model User{
     email     String
     phone     String
     password  String
+    reservations Reservation[]
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
+}
+
+model Reservation {
+  id        String   @id @default(cuid())
+  seating String
+  date      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId   String
+  user     User      @relation(fields: [userId], references: [id])
 }
