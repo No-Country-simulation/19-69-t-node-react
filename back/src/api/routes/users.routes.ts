@@ -4,10 +4,12 @@ import bcrypt from "bcrypt"
 const router = Router();
 
 router.post("/", async (req, res) => {
-    const password =  await req.body.password;
-    const hash = bcrypt.hash(password, 10)
+    let data_ = req.body;
+    const password = data_.password
+    const hash = await bcrypt.hash(password, 10)
+    data_ = {...data_, password: hash }
     const newUser = await prisma.user.create({
-        data: req.body,
+        data: data_, 
     })
     res.json(newUser);
 });
