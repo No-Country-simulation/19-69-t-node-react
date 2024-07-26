@@ -1,10 +1,6 @@
 import express from "express";
 
-import { foodRoutes } from "./api/routes/index.js";
-import { tagsRoutes } from "./api/routes/index.js";
-import { userRoutes } from "./api/routes/index.js";
-import { countriesRoutes } from "./api/routes/index.js";
-import { ingredientsRoutes } from "./api/routes/index.js";
+import { countriesRoutes, foodRoutes, ingredientsRoutes, reservationsRoutes, tagsRoutes, userRoutes } from "./api/routes/index.js";
 
 const app = express();
 app.use(express.json());
@@ -15,6 +11,7 @@ app.use("/api/tags", tagsRoutes);
 app.use("/api/countries", countriesRoutes);
 app.use("/api/ingredients", ingredientsRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/reservations", reservationsRoutes);
 
 
 app.listen(port, () => {
