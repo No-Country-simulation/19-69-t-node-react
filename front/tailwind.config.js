@@ -19,6 +19,32 @@ export default {
         "secondary-color": '#9E0303',
         "main-orange": '#e0570dfd',
       },
+      keyframes: {
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateY(-20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        appear: {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        slidein: "slidein 1s ease forwards",
+        slidein400: "slidein 1s ease 400ms forwards",
+        slidein800: "slidein 1s ease 800ms forwards",
+        appear900: "appear 1s ease 900ms forwards",
+      },
     },
   },
   plugins: [],
