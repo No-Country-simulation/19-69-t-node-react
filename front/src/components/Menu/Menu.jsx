@@ -21,7 +21,7 @@ const Menu = () => {
 
   return (
     <section className="h-full relative w-full py-32 bg-main-color z-0 text-white text-center">
-      <div className="absolute bg-[url(/imgs/bg-nosotros-2.png)] bg-cover bg-fixed inset-0 opacity-25 -z-10"></div>
+      <div className="absolute bg-[url(/imgs/bg-nosotros-2.png)] bg-cover bg-fixed inset-0 opacity-40 -z-10"></div>
       <h1 className="mt-5 mb-24 text-3xl md:text-[2.6rem] underline decoration-[#4b2b21] underline-offset-8 decoration-2">
         Nuestros platos
       </h1>
