@@ -1,5 +1,5 @@
-import { SlSocialFacebook, SlSocialInstagram } from "react-icons/sl";
 import { FaXTwitter } from "react-icons/fa6";
+import { SlSocialFacebook, SlSocialInstagram } from "react-icons/sl";
 
 export default function Footer() {
   return (

@@ -1,10 +1,17 @@
+
+
 import express from "express";
 
+
+import cors from 'cors';
 import { countriesRoutes, foodRoutes, ingredientsRoutes, reservationsRoutes, tagsRoutes, userRoutes } from "./api/routes/index.js";
 
 const app = express();
 app.use(express.json());
 const port = 3000;
+app.use(cors());
+
+
 
 app.use("/api/food", foodRoutes);
 app.use("/api/tags", tagsRoutes);

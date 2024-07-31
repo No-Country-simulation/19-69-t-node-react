@@ -31,9 +31,8 @@ export default function Navbar() {
           </button>
         </div>
         <ul
-          className={`nav-items ${
-            showDropdown ? "isActive bg-secondary-color/80" : ""
-          }`}
+          className={`nav-items ${showDropdown ? "isActive bg-secondary-color/80" : ""
+            }`}
         >
           <li className="nav-item animate-slidein100 opacity-0 parent-underlinle-animation">
             <Link className="nav-link underline-animation" to="/">
@@ -46,7 +45,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="nav-item animate-slidein200 opacity-0 parent-underlinle-animation">
-            <Link className="nav-link underline-animation" to="/reserva">
+            <Link className="nav-link underline-animation" to="/reservas">
               Reservar
             </Link>
           </li>
