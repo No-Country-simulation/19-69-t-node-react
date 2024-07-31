@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar-content bg-secondary-color/80">
+      <nav className="navbar-content bg-[#1a1a1a]">
         <div className="divisor">
           <Logo />
           <button className="dropdown-toggle" onClick={handleClick}>
@@ -35,23 +35,28 @@ export default function Navbar() {
             showDropdown ? "isActive bg-secondary-color/80" : ""
           }`}
         >
-          <li className="nav-item">
-            <Link className="nav-link" to={"/"}>
+          <li className="nav-item animate-slidein100 opacity-0 parent-underlinle-animation">
+            <Link className="nav-link underline-animation" to="/">
               Inicio
             </Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Platos
-            </a>
+          <li className="nav-item animate-slidein200 opacity-0 parent-underlinle-animation">
+            <Link className="nav-link underline-animation" to="/menu">
+              Menú
+            </Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Reservas
-            </a>
+          <li className="nav-item animate-slidein200 opacity-0 parent-underlinle-animation">
+            <Link className="nav-link underline-animation" to="/reserva">
+              Reservar
+            </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to={"/contacto"}>
+          <li className="nav-item animate-slidein200 opacity-0 parent-underlinle-animation">
+            <Link className="nav-link underline-animation" to="/nosotros">
+              Nosotros
+            </Link>
+          </li>
+          <li className="nav-item animate-slidein400 opacity-0 parent-underlinle-animation">
+            <Link className="nav-link underline-animation" to="/contacto">
               Contacto
             </Link>
           </li>

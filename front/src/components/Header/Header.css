@@ -28,18 +28,39 @@
   height: 0vh;
 }
 
+/* Navlink hover animation */
+
+.parent-underlinle-animation .underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.parent-underlinle-animation .underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #882626;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.parent-underlinle-animation:hover .underline-animation::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .nav-link {
-  padding: 30px 5px;
+  padding: 4px 5px;
   transition: 0.3s ease;
   text-decoration: none;
   color: var(--color-text-2);
   font-weight: var(--font-weight-medium);
   font-size: 1rem;
   letter-spacing: 2px;
-}
-
-.nav-link:hover {
-  color: #fdcb19;
 }
 
 .dropdown-toggle {
