@@ -30,6 +30,16 @@ export default {
             transform: "translateY(0)",
           },
         },
+        slideup: {
+          from: {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
         appear: {
           from: {
             opacity: "0",
@@ -42,8 +52,12 @@ export default {
       animation: {
         slidein: "slidein 1s ease forwards",
         slidein400: "slidein 1s ease 400ms forwards",
+        slidein100: "slidein 1s ease 100ms forwards",
+        slidein200: "slidein 1s ease 200ms forwards",
+        slidein300: "slidein 1s ease 300ms forwards",
         slidein800: "slidein 1s ease 800ms forwards",
         appear900: "appear 1s ease 900ms forwards",
+
       },
     },
   },
