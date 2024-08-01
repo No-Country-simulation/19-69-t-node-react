@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import Calendar from 'react-calendar';
 import { useNavigate } from 'react-router-dom';
-import './Reservations.css';
 
 const Reservations = () => {
     const [nombre, setNombre] = useState('');

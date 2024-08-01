@@ -1,0 +1,141 @@
+.calendar {
+    width: 100%;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.calendarTile {
+    max-width: initial !important;
+    background-color: #444;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.calendarTileHover {
+    background-color: #555;
+}
+
+.calendarTileActive {
+    background-color: #4b2b21 !important;
+    color: white !important;
+}
+
+.calendarNavigationButton {
+    color: white;
+    background-color: #222;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.calendarNavigationButtonHover {
+    background-color: #333;
+}
+
+.calendarNavigationButtonDisabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.calendarWeekendDay {
+    color: #d4d4d4;
+}
+
+.calendarNeighboringMonthDay {
+    color: #555;
+}
+
+.horaButtons {
+    perspective: 1200px;
+}
+
+.horaButton {
+    background-color: #444;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.horaButtonHover {
+    background-color: #555;
+}
+
+.horaButtonActive {
+    background-color: #4b2b21;
+}
+
+.horaButtonDefault {
+    background-color: #444;
+}
+
+.horaButton3D {
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.horaButton3DHover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flexCol {
+    flex-direction: column;
+}
+
+.flexRow {
+    flex-direction: row;
+}
+
+.lgFlexRow {
+    flex-direction: row;
+}
+
+.lgWHalf {
+    width: 50%;
+}
+
+.lgWThird {
+    width: 33.33%;
+}
+
+.lgMt0 {
+    margin-top: 0;
+}
+
+.mt10 {
+    margin-top: 2.5rem;
+}
+
+.mb10 {
+    margin-bottom: 2.5rem;
+}
+
+.mb5 {
+    margin-bottom: 1.25rem;
+}
+
+.spaceY7NotLastChild {
+    margin-bottom: 1.75rem;
+}
+
+.spaceY7Child {
+    margin-top: 1.75rem;
+}
+
+.px5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.roundedLg {
+    border-radius: 0.5rem;
+}
+
+.shadowLg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
