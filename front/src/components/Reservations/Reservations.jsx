@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import Calendar from 'react-calendar';
 import { useNavigate } from 'react-router-dom';
+import styles from './Reservations.module.css';
 
 const Reservations = () => {
     const [nombre, setNombre] = useState('');
     const [apellidos, setApellidos] = useState('');
-    const [telefono, setTelefono] = useState(''); // Estado para el teléfono
+    const [telefono, setTelefono] = useState('');
     const [numeroAdultos, setNumeroAdultos] = useState(1);
     const [numeroNinos, setNumeroNinos] = useState(0);
     const [fecha, setFecha] = useState(new Date());
@@ -68,9 +69,7 @@ const Reservations = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
         const fechaFormateada = fecha.toISOString().split('T')[0];
-
 
         try {
             const response = await fetch('http://localhost:3000/api/reservations', {
@@ -81,7 +80,7 @@ const Reservations = () => {
                 body: JSON.stringify({
                     nombre,
                     apellidos,
-                    phone: telefono, // Añadir el teléfono al cuerpo de la solicitud
+                    phone: telefono,
                     numeroAdultos,
                     numeroNinos,
                     fecha: fechaFormateada,
@@ -89,22 +88,20 @@ const Reservations = () => {
                 }),
             });
 
-
-
             if (response.ok) {
                 const data = await response.json();
-
                 navigate('/confirmation', { state: { numeroReserva: data.data.id } });
             } else {
                 const errorData = await response.json();
-
-                setMensaje(`Error: ${errorData.message || 'Error al realizar la reserva'}`);
+                console.error('Error:', errorData.message || 'Error al realizar la reserva');
+                navigate('/error-confirmation'); // Redirigir a la página de error
             }
         } catch (err) {
-
-            setMensaje('Error al realizar la reserva.');
+            console.error('Error al realizar la reserva:', err);
+            navigate('/error-confirmation'); // Redirigir a la página de error
         }
     };
+
 
     const handleHoraClick = (horaDisponible) => {
         if (horasReservadas[horaDisponible] >= 15) {
@@ -116,7 +113,7 @@ const Reservations = () => {
     };
 
     return (
-        <section className="h-full w-full text-white">
+        <section className="h-full w-full text-white font-montserrat">
             <div className="h-[20vh] flex justify-center items-center pt-20 relative bg-main-color z-0">
                 <div className="absolute bg-[url(/imgs/bg-nosotros-2.png)] bg-cover bg-fixed opacity-30 inset-0 -z-10"></div>
                 <h1 className="text-3xl md:pb-8 md:pt-8 md:text-5xl underline decoration-[#4b2b21] underline-offset-8 decoration-2">
@@ -125,7 +122,7 @@ const Reservations = () => {
             </div>
             <div className="min-h-screen flex flex-col lg:flex-row justify-center items-start relative z-0 bg-main-color p-5">
                 <div className="absolute bg-[url(/imgs/bg-nosotros-2.png)] bg-cover bg-fixed inset-0 opacity-30 -z-10"></div>
-                <form className="w-full lg:w-1/3 flex flex-col justify-center items-center px-5 space-y-7 bg-gray-900 p-10 rounded-lg shadow-lg" onSubmit={handleSubmit}>
+                <form className={`w-full lg:w-1/3 flex flex-col justify-center items-center px-5 space-y-7 ${styles.bgForm} p-10 ${styles.roundedLg} ${styles.shadowLg}`} onSubmit={handleSubmit}>
                     <div className="w-full">
                         <label className="block mb-2">Nombre:</label>
                         <input
@@ -147,7 +144,7 @@ const Reservations = () => {
                         />
                     </div>
                     <div className="w-full">
-                        <label className="block mb-2">Teléfono:</label> {/* Nuevo campo de teléfono */}
+                        <label className="block mb-2">Teléfono:</label>
                         <input
                             type="tel"
                             value={telefono}
@@ -178,49 +175,58 @@ const Reservations = () => {
                             required
                         />
                     </div>
-                    <div className="w-full">
-                        <label className="block mb-2  text-center">Fecha:</label>
+                    <div className="w-full text-center">
+                        <label className="block mb-2 text-center">Fecha:</label>
                         <Calendar
                             value={fecha}
                             onChange={setFecha}
                             minDate={hoy}
-                            className="w-full px-3 py-2 border text-center rounded-lg"
+                            className={styles.reactCalendar}
+                            tileClassName={({ date, view }) => {
+
+                                if (view === 'month' && date.getMonth() === fecha.getMonth() && date.getFullYear() === fecha.getFullYear()) {
+                                    return date.getDate() === fecha.getDate() ? styles.reactCalendarTileActive : styles.reactCalendarTile;
+                                }
+                                return '';
+                            }}
+                            tileContent={({ date, view }) => {
+
+                            }}
                         />
                     </div>
                     <div className="w-full">
                         <label className="block mb-2">Hora:</label>
-                        <div className="flex flex-wrap gap-2 hora-buttons">
+                        <div className={styles.horaButtons}>
                             {horasDisponibles.map((horaDisponible) => (
                                 <motion.button
                                     key={horaDisponible}
                                     type="button"
                                     onClick={() => handleHoraClick(horaDisponible)}
-                                    className={`px-4 py-2 rounded-lg ${horasReservadas[horaDisponible] >= 15
+                                    className={`${styles.horaButton} ${horasReservadas[horaDisponible] >= 15
                                         ? 'bg-gray-400 cursor-not-allowed'
                                         : hora === horaDisponible
-                                            ? 'bg-main-active text-white'
-                                            : 'bg-main-default'
-                                        } hora-button`}
+                                            ? styles.horaButtonActive
+                                            : styles.horaButtonDefault
+                                        }`}
                                     disabled={horasReservadas[horaDisponible] >= 15}
                                     initial={{ scale: 0.9, rotateY: 0, rotateX: 0 }}
                                     animate={{ scale: 1 }}
                                     transition={{ duration: 0.3 }}
                                     whileHover={{
                                         scale: 1.1,
-                                        rotateY: -10, // Rotación en el eje Y para efecto 3D
-                                        rotateX: 10, // Rotación en el eje X para efecto 3D
+                                        rotateY: -10,
+                                        rotateX: 10,
                                         transition: { duration: 0.3 }
                                     }}
                                     whileTap={{
                                         scale: 0.95,
-                                        rotateY: 0, // Vuelve a la posición original al hacer clic
-                                        rotateX: 0, // Vuelve a la posición original al hacer clic
+                                        rotateY: 0,
+                                        rotateX: 0,
                                         transition: { duration: 0.3 }
                                     }}
                                 >
                                     {horaDisponible}
                                 </motion.button>
-
                             ))}
                         </div>
                     </div>
@@ -229,7 +235,7 @@ const Reservations = () => {
                             <p className="text-red-500">{mensaje}</p>
                         </div>
                     )}
-                    <button type="submit" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    <button type="submit" className={styles.buttonSubmit}>
                         Reservar
                     </button>
                 </form>

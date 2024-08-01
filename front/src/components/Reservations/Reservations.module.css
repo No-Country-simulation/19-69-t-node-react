@@ -1,0 +1,89 @@
+
+.reactCalendar {
+    width: 100%;
+    background-color: #333; 
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-top: 1.7rem;
+}
+
+.reactCalendarTile {
+    max-width: initial !important;
+    background-color: #444; 
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.reactCalendarTileHover {
+    background-color: #555; 
+}
+
+.reactCalendarTileActive {
+    background-color: #6f4f28 !important;
+    color: white !important;
+}
+
+
+.reactCalendarNeighboringMonthDay {
+    color: #555;
+}
+
+
+.reactCalendarWeekendDay {
+    color: #d4d4d4;
+}
+
+
+.horaButtons {
+    perspective: 1200px;
+}
+
+.horaButton {
+    background-color: #6f4f28; 
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+.horaButton:hover {
+    background-color: #3b2005; 
+}
+
+.horaButtonActive {
+    background-color: #3b2005; 
+}
+
+.horaButtonDefault {
+    background-color: #6f4f28; 
+}
+
+.horaButton3D {
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.horaButton3DHover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.buttonSubmit {
+    background-color: #ef4444; 
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonSubmit:hover {
+    background-color: #610202; 
+}
