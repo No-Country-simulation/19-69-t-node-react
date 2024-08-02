@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar-content bg-[#1a1a1a]">
+      <nav className="navbar-content bg-[#1a1a1a] !z-20">
         <div className="divisor">
           <Logo />
           <button className="dropdown-toggle" onClick={handleClick}>

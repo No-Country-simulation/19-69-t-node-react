@@ -28,7 +28,7 @@ function App() {
         <Route path="/nosotros" element={<AboutUs />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/todos-los-países" element={<AllCountries />} />
-        <Route path="/menu/mexico" element={<PlateMexico />} />
+        <Route path="/menu/méxico" element={<PlateMexico />} />
         <Route path="/menu/argentina" element={<PlateArgentina />} />
         <Route path="/menu/colombia" element={<PlateColombia />} />
         <Route path="/menu/el-salvador" element={<PlateElSalvador />} />
