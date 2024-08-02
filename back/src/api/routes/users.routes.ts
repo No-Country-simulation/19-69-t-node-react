@@ -25,7 +25,11 @@ router.get("/:id", async (req, res) => {
       id: req.params.id,
     },
   });
-  res.json({...user, password: "********"});
+  if (user) {
+    res.json({ ...user, password: "********" });
+  } else {
+    res.status(404).json({ message: "Usuario no encontrado" });
+  }
 });
 
 router.put("/:id", async (req, res) => {

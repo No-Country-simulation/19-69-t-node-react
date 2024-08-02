@@ -4,7 +4,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --exec node --loader ts-node/esm src/server.ts",
+    "dev": "tsx src/server.ts",
+    "test": "tsx src/data/generator.ts",
     "build": "tsc",
     "start": "node build/server.js"
   },
@@ -17,18 +18,18 @@
     "bcrypt": "5.1.1",
     "cors": "^2.8.5",
     "express": "4.19.2",
-    "multer": "1.4.5-lts.1"
+    "multer": "1.4.5-lts.1",
+    "tsx": "4.16.5"
   },
   "devDependencies": {
     "@types/bcrypt": "5.0.2",
-    "@types/cors": "^2.8.17",
+    "@types/cors": "2.8.17",
     "@types/dotenv": "8.2.0",
     "@types/express": "4.17.21",
     "@types/multer": "1.4.11",
     "@types/node": "20.14.10",
     "nodemon": "3.1.4",
     "prisma": "5.16.2",
-    "ts-node": "^10.9.2",
     "typescript": "5.5.3"
   }
 }
