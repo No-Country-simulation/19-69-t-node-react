@@ -1,5 +1,4 @@
 import FormContact from "./FormContact";
-import LocationMap from "./LocationMap";
 
 export default function Contact() {
   return (
@@ -7,10 +6,9 @@ export default function Contact() {
       <div className="relative top-16">
         <div>
           <h1 className="uppercase">Contact</h1>
-          <p className="text-4xl font-medium">Contactanos</p>
+          <p className="text-4xl font-medium">Contactános</p>
         </div>
         <FormContact />
-        <LocationMap />
       </div>
     </section>
   );
