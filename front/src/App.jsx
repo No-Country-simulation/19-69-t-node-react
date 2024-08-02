@@ -1,17 +1,20 @@
 import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import AboutUs from "./components/AboutUs/AboutUs";
 import { AuthView } from "./components/AuthView/AuthView";
+import Confirmation from "./components/Confirmation/Confirmation";
+import ErrorConfirmation from "./components/Confirmation/ErrorConfirmation";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
 import Contact from "./components/Main/Contact/Contact";
-import AboutUs from "./components/AboutUs/AboutUs";
+import Main from "./components/Main/Main";
 import Menu from "./components/Menu/Menu";
-import PlateMexico from "./components/Plate/PlateMexico";
+import PlateArgentina from "./components/Plate/PlateArgentina";
 import PlateColombia from "./components/Plate/PlateColombia";
 import PlateElSalvador from "./components/Plate/PlateElSalvador";
 import PlateEspaña from "./components/Plate/PlateEspaña";
-import PlateArgentina from "./components/Plate/PlateArgentina";
-import "./App.css";
+import PlateMexico from "./components/Plate/PlateMexico";
+import Reservations from "./components/Reservations/Reservations";
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
         <Route path="/menu/colombia" element={<PlateColombia />} />
         <Route path="/menu/el-salvador" element={<PlateElSalvador />} />
         <Route path="/menu/españa" element={<PlateEspaña />} />
+        <Route path="/reservas" element={<Reservations />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/error-confirmation" element={<ErrorConfirmation />} />
       </Routes>
       {window.location.pathname !== "/login" ? <Footer /> : null}
     </>
