@@ -1,88 +1,47 @@
+import BgImage from "./components/BgImage";
+import Card from "./components/Card";
+import Subtitle from "./components/Subtitle";
+import Title from "./components/Title";
+
 export default function PlateElSalvador() {
   return (
     <section className="relative w-full max-w-full py-32 flex flex-col items-center justify-center z-0 text-white">
-      <div
-        className="absolute inset-0 bg-black"
-        style={{
-          backgroundImage: `url(/imgs/background-el-salvador.webp)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          filter: "brightness(0.4)",
-        }}
-      />
+      <BgImage bgUrl="bg-[url(/imgs/background-el-salvador.webp)]" />
       <div className="relative z-10 text-center w-full max-w-full">
-        <h1 className="uppercase font-semibold text-4xl ">
-          Platos de El Salvador
-        </h1>
-        <h2 className="text-3xl font-medium mt-12 uppercase">Platillos</h2>
+        <Title title="Platos de El Salvador" />
+        <Subtitle subtitle="Platillos" />
         <div className="flex flex-col lg:flex-row flex-grow items-center justify-center gap-14 mt-8 px-4 max-w-full sm:px-14">
-          <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
-            <img
-              src="/imgs/el-salvador-pupusas.webp"
-              alt="Imagen de Tacos al Pastor"
-              className="h-[305] max-h-full"
-            />
-            <div className="flex items-center justify-between w-full">
-              <h3 className="text-2xl font-bold underline">Pupusas</h3>
-              <p className="text-2xl text-yellow-600 font-medium">$7.5</p>
-            </div>
-            <p>
-              Tortillas gruesas rellenas de queso, frijoles o chicharrón,
-              servidas con curtido y salsa.
-            </p>
-          </div>
-          <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
-            <img
-              src="/imgs/el-salvador-yuca-frita.webp"
-              alt="Imagen de Totopos con Guacamole"
-              className="h-[305] max-h-full"
-            />
-            <div className="flex items-center justify-between w-full">
-              <h3 className="text-2xl font-bold underline">Yuca frita</h3>
-              <p className="text-2xl text-yellow-600 font-medium">$10</p>
-            </div>
-            <p>
-              Yuca frita servida con trozos de chicharrón crujiente y curtido.
-            </p>
-          </div>
+          <Card
+            imgUrl="/imgs/el-salvador-pupusas.webp"
+            imgAlt="Imagen de Tacos al Pastor"
+            plateName="Pupusas"
+            platePrice="$7.5"
+            plateDesc="Tortillas gruesas rellenas de queso, frijoles o chicharrón, servidas con curtido y salsa."
+          />
+          <Card
+            imgUrl="/imgs/el-salvador-yuca-frita.webp"
+            imgAlt="Imagen de Totopos con Guacamole"
+            plateName="Yuca frita"
+            platePrice="$10"
+            plateDesc="Yuca frita servida con trozos de chicharrón crujiente y curtido."
+          />
         </div>
-        <h2 className="text-3xl font-medium mt-12 uppercase">Bebidas</h2>
+        <Subtitle subtitle="Bebidas" />
         <div className="flex flex-col lg:flex-row flex-grow items-center justify-center gap-14 mt-8 px-4 max-w-full md:px-14">
-          <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
-            <img
-              src="/imgs/el-salvador-horchata.webp"
-              alt="Imagen de Margarita"
-              className="h-[305] max-h-full"
-            />
-            <div className="flex items-center justify-between w-full">
-              <h3 className="text-2xl font-bold underline">
-                Horchata de Morro
-              </h3>
-              <p className="text-2xl text-yellow-600 font-medium">$16</p>
-            </div>
-            <p>
-              Bebida refrescante hecha de semillas de morro, ajonjolí y
-              especias.
-            </p>
-          </div>
-          <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
-            <img
-              src="/imgs/el-salvador-agua-de-tamarindo.webp"
-              alt="Imagen de agua de Jamaica"
-              className="h-[305] max-h-full"
-            />
-            <div className="flex items-center justify-between w-full">
-              <h3 className="text-2xl font-bold underline">
-                Agua de Tamarindo
-              </h3>
-              <p className="text-2xl text-yellow-600 font-medium">$18</p>
-            </div>
-            <p>
-              Jugo de tamarindo, dulce y ligeramente ácido, perfecto para
-              acompañar comidas saladas.
-            </p>
-          </div>
+          <Card
+            imgUrl="/imgs/el-salvador-horchata.webp"
+            imgAlt="Imagen de Margarita"
+            plateName="Horchata de Morro"
+            platePrice="$16"
+            plateDesc="Bebida refrescante hecha de semillas de morro, ajonjolí y especias."
+          />
+          <Card
+            imgUrl="/imgs/el-salvador-agua-de-tamarindo.webp"
+            imgAlt="Imagen de agua de Jamaica"
+            plateName="Agua de Tamarindo"
+            platePrice="$18"
+            plateDesc="Jugo de tamarindo, dulce y ligeramente ácido, perfecto para acompañar comidas saladas."
+          />
         </div>
       </div>
     </section>
