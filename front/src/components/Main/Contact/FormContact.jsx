@@ -45,7 +45,7 @@ export default function FormContact() {
       />
       <button
         type="submit"
-        className="border border-amber-800 py-2 px-10 rounded-full bg-amber-500 hover:bg-transparent transition duration-200 ease-in-out font"
+        className="border border-amber-800 mb-[30px] py-2 px-10 rounded-full bg-amber-500 hover:bg-transparent transition duration-200 ease-in-out font"
       >
         Enviar
       </button>
