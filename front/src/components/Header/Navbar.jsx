@@ -31,8 +31,7 @@ export default function Navbar() {
           </button>
         </div>
         <ul
-          className={`nav-items ${showDropdown ? "isActive bg-secondary-color/80" : ""
-            }`}
+          className={`nav-items ${showDropdown ? "isActive bg-[#1a1a1a]" : ""}`}
         >
           <li className="nav-item animate-slidein100 opacity-0 parent-underlinle-animation">
             <Link className="nav-link underline-animation" to="/">
