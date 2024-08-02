@@ -1,29 +1,10 @@
-export default function PlateMexico({
-  country, // nombre del pais
-  backgroundUrl, // url de la imagen de fondo
-  firstPlateUrl, // url de la primera imagen de platillo
-  firstDrinkUrl, // url de la primera imagen de bebida
-  firstPlateTitle, // titulo de la primera imagen de platillo
-  firstPlateDescription, // descripcion de la primera imagen de platillo
-  firstPlatePrice, // precio de la primera imagen de platillo
-  secondPlateUrl, // url de la segunda imagen de platillo
-  secondPlateTitle, // titulo de la segunda imagen de platillo
-  secondPlateDescription, // descripcion de la segunda imagen de platillo
-  secondPlatePrice, // precio de la segunda imagen de platillo
-  secondDrinkUrl, // url de la segunda imagen de bebida
-  firstDrinkTitle, // titulo de la primera imagen de bebida
-  secondDrinkTitle, // titulo de la segunda imagen de bebida
-  firstDrinkPrice, // precio de la primera imagen de bebida
-  secondDrinkPrice, // precio de la segunda imagen de bebida
-  firstDrinkDescription, // descripcion de la primera imagen de bebida
-  secondDrinkDescription, // descripcion de la segunda imagen de bebida
-}) {
+export default function PlateMexico() {
   return (
     <section className="relative w-full max-w-full py-32 flex flex-col items-center justify-center z-0 text-white">
       <div
         className="absolute inset-0 bg-black"
         style={{
-          backgroundImage: `url(${backgroundUrl})`,
+          backgroundImage: `url(/imgs/background-mexico.webp)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -31,77 +12,64 @@ export default function PlateMexico({
         }}
       />
       <div className="relative z-10 text-center w-full max-w-full">
-        <h1 className="uppercase font-semibold text-4xl ">
-          Platos de {country}
-        </h1>
+        <h1 className="uppercase font-semibold text-4xl ">Platos de México</h1>
         <h2 className="text-3xl font-medium mt-12 uppercase">Platillos</h2>
         <div className="flex flex-col lg:flex-row flex-grow items-center justify-center gap-14 mt-8 px-4 max-w-full sm:px-14">
           <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
             <img
-              src={firstPlateUrl}
+              src="/imgs/mexico-tacos-al-pastor.webp"
               alt="Imagen de Tacos al Pastor"
               className="h-[305] max-h-full"
             />
             <div className="flex items-center justify-between w-full">
-              <h3 className="text-2xl font-bold underline">
-                {firstPlateTitle}
-              </h3>
-              <p className="text-2xl text-yellow-600 font-medium">
-                {firstPlatePrice}
-              </p>
+              <h3 className="text-2xl font-bold underline">Tacos al Pastor</h3>
+              <p className="text-2xl text-yellow-600 font-medium">$10</p>
             </div>
-            <p>{firstPlateDescription}</p>
+            <p>
+              Tacos de cerdo adobado, servidos con piña,cebolla,cilantro y
+              salsa.
+            </p>
           </div>
           <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
             <img
-              src={secondPlateUrl}
+              src="/imgs/mexico-totopos-y-guacamole.webp"
               alt="Imagen de Totopos con Guacamole"
               className="h-[305] max-h-full"
             />
             <div className="flex items-center justify-between w-full">
               <h3 className="text-2xl font-bold underline">
-                {secondPlateTitle}
+                Totopos y Guacamole
               </h3>
-              <p className="text-2xl text-yellow-600 font-medium">
-                {secondPlatePrice}
-              </p>
+              <p className="text-2xl text-yellow-600 font-medium">$7.5</p>
             </div>
-            <p>{secondPlateDescription}</p>
+            <p>Totopos de pollo, cebolla, tomate, queso y salsa.</p>
           </div>
         </div>
         <h2 className="text-3xl font-medium mt-12 uppercase">Bebidas</h2>
         <div className="flex flex-col lg:flex-row flex-grow items-center justify-center gap-14 mt-8 px-4 max-w-full md:px-14">
           <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
             <img
-              src={firstDrinkUrl}
+              src="/imgs/mexico-margarita.webp"
               alt="Imagen de Margarita"
               className="h-[305] max-h-full"
             />
             <div className="flex items-center justify-between w-full">
-              <h3 className="text-2xl font-bold underline">
-                {firstDrinkTitle}
-              </h3>
-              <p className="text-2xl text-yellow-600 font-medium">
-                {firstDrinkPrice}
-              </p>
+              <h3 className="text-2xl font-bold underline">Margarita</h3>
+              <p className="text-2xl text-yellow-600 font-medium">$20</p>
             </div>
-            <p>{firstDrinkDescription}</p>
+            <p>Margarita de limón, mango y kiwi.</p>
           </div>
           <div className="flex flex-col items-center justify-center w-full md:w-[60%] lg:w-[30%] bg-black gap-6 p-7 border-white border-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-opacity-70 h-[505] text-pretty">
             <img
-              src={secondDrinkUrl}
+              src="/imgs/mexico-agua-de-jamaica.png"
               alt="Imagen de agua de Jamaica"
               className="h-[305] max-h-full"
             />
             <div className="flex items-center justify-between w-full">
-              <h3 className="text-2xl font-bold underline">
-                {secondDrinkTitle}
-              </h3>
-              <p className="text-2xl text-yellow-600 font-medium">
-                {secondDrinkPrice}
-              </p>
+              <h3 className="text-2xl font-bold underline">Agua de Jamaica</h3>
+              <p className="text-2xl text-yellow-600 font-medium">$22</p>
             </div>
-            <p>{secondDrinkDescription}</p>
+            <p>Agua de Jamaica con limón y piña.</p>
           </div>
         </div>
       </div>
