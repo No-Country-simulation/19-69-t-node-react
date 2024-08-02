@@ -12,13 +12,13 @@ export default function Footer() {
       <div className="flex flex-col pb-2 gap-4 sm:gap-7 text-center justify-between">
         <h3 className="font-semibold underline underline-offset-4 decoration-red-500/80">Seguinos</h3>
         <div className="flex gap-3 text-lg sm:text-2xl">
-          <a href="#" className="hover:text-blue-700 transition-all">
+          <a href="https://www.facebook.com" rel="noreferrer" target="_blank" className="hover:text-blue-700 transition-all">
             <SlSocialFacebook />
           </a>
-          <a href="#" className="hover:text-purple-500 transition-all">
+          <a href="https://www.instagram.com" rel="noreferrer" target="_blank" className="hover:text-purple-500 transition-all">
             <SlSocialInstagram />
           </a>
-          <a href="#" className="hover:text-blue-300 transition-all">
+          <a href="https://x.com" rel="noreferrer" target="_blank" className="hover:text-blue-300 transition-all">
             <FaXTwitter />
           </a>
         </div>

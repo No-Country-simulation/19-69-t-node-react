@@ -114,7 +114,7 @@ const Reservations = () => {
 
     return (
         <section className="h-full w-full text-white font-montserrat">
-            <div className="h-[20vh] flex justify-center items-center pt-20 relative bg-main-color z-0">
+            <div className="h-[26vh] flex justify-center items-center pt-20 relative bg-main-color z-0">
                 <div className="absolute bg-[url(/imgs/bg-nosotros-2.png)] bg-cover bg-fixed opacity-30 inset-0 -z-10"></div>
                 <h1 className="text-3xl md:pb-8 md:pt-8 md:text-5xl underline decoration-[#4b2b21] underline-offset-8 decoration-2">
                     Reserva una mesa

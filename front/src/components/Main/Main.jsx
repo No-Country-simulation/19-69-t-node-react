@@ -9,7 +9,7 @@ const Main = () => {
           Bienvenido a
         </h1>
         <h2 className="text-3xl sm:text-5xl md:text-[75px] mt-4 font-bold animate-slidein400 opacity-0">
-          EDEN DE SABORES
+          EDÉN DE SABORES
         </h2>
         <p className="mt-8 sm:mt-6 text-base sm:text-lg w-[95%] sm:w-4/5 animate-slidein800 opacity-0">
           Descubre una experiencia culinaria única donde los sabores de México,
@@ -23,7 +23,7 @@ const Main = () => {
             Menú
           </Link>
           <Link
-            to="/menu"
+            to="/reservas"
             className="px-2 sm:px-4 py-2 text-white bg-[#1a1a1a] hover:bg-red-800 border-b border-red-800 rounded-md transition-all"
           >
             Reservar

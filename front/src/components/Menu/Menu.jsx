@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   const renderCountries = () => {
-    const countries = ["Todos los Países", "Argentina", "Colombia", "El Salvador", "España", "Mexico",];
+    const countries = ["Todos los Países", "Argentina", "Colombia", "El Salvador", "España", "México",];
     return countries.map((country, index) => {
       return (
         <section key={index}>

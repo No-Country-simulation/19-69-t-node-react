@@ -6,7 +6,7 @@ export default function Contact() {
       <div className="relative top-16">
         <div>
           <h1 className="uppercase">Contact</h1>
-          <p className="text-4xl font-medium">Contactános</p>
+          <p className="text-4xl font-medium">Contactanos</p>
         </div>
         <FormContact />
       </div>
