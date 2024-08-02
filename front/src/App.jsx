@@ -15,6 +15,7 @@ import PlateElSalvador from "./components/Plate/PlateElSalvador";
 import PlateEspaña from "./components/Plate/PlateEspaña";
 import PlateMexico from "./components/Plate/PlateMexico";
 import Reservations from "./components/Reservations/Reservations";
+import AllCountries from "./components/Plate/AllCountries";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contacto" element={<Contact />} />
         <Route path="/nosotros" element={<AboutUs />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/menu/todos-los-países" element={<AllCountries />} />
         <Route path="/menu/mexico" element={<PlateMexico />} />
         <Route path="/menu/argentina" element={<PlateArgentina />} />
         <Route path="/menu/colombia" element={<PlateColombia />} />
